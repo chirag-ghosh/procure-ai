@@ -1,0 +1,35 @@
+//color-scheme
+$white: #e8e6e5;
+$light-grey: #bcbcc2;
+$grey: #787886;
+$dark-grey: #595969;
+$light-black: #363748;
+$black: #111111;
+$text: #cacaca;
+$text-secondary: #aaaaaa;
+
+$primary: #646cff;
+$primary-hover: #535bf2;
+$border-color: rgba($light-grey, 0.1);
+$glass-bg: rgba($light-black, 0.6);
+
+//typography
+$font: 'Hanken Grotesk', sans-serif;
+$monospace-font: 'Noto Sans Mono', monospace;
+
+// media query variables
+// Small tablets and large smartphones (landscape view)
+$screen-sm-max: 576px;
+$screen-sm-min: 577px;
+
+// Small tablets (portrait view)
+$screen-md-max: 767px;
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+$screen-lg-max: 991px;
+
+// Large tablets and desktops
+$screen-xl-min: 1450px;
+$screen-xl-max: 1449px;

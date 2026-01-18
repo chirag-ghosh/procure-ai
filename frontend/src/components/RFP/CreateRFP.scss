@@ -1,0 +1,95 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.create-rfp-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, $white, $grey);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p.subtitle {
+    color: $text-secondary;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+
+  .prompt-wrapper {
+    width: 100%;
+    position: relative;
+    background: $glass-bg;
+    border: 1px solid $border-color;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+
+    &:focus-within {
+      border-color: $primary;
+      transform: translateY(-2px);
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 150px;
+      background: transparent;
+      border: none;
+      color: $white;
+      font-family: $font;
+      font-size: 1.2rem;
+      resize: none;
+      outline: none;
+
+      &::placeholder {
+        color: $dark-grey;
+      }
+    }
+
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+      border-top: 1px solid rgba($white, 0.05);
+      padding-top: 1rem;
+
+      .hints {
+        font-family: $monospace-font;
+        color: $grey;
+        font-size: 0.85rem;
+      }
+
+      button {
+        background: $primary;
+        color: white;
+        padding: 0.8rem 2rem;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        border: none;
+        transition: background 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        &:hover {
+          background: $primary-hover;
+        }
+      }
+    }
+  }
+}

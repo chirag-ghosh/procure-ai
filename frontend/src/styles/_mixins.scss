@@ -1,0 +1,46 @@
+// Small devices
+@mixin sm {
+  @media (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-sm-min}) and (max-width: #{$screen-xl-max}) {
+    @content;
+  }
+}
+
+// Small and Medium devices
+@mixin smd {
+  @media (max-width: #{$screen-xl-max}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+@mixin custom-scrollbar {
+  &::-webkit-scrollbar-track {
+    background-color: rgba($black, 0.5);
+    border-radius: 100px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba($black, 0.5);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba($text-secondary, 0.75);
+    border-radius: 100px;
+  }
+
+  scrollbar-gutter: stable;
+}

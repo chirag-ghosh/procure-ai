@@ -1,0 +1,88 @@
+@import '../../styles/variables';
+
+.dynamic-data-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  .data-card {
+    background: rgba($light-black, 0.4);
+    border: 1px solid rgba($white, 0.1);
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    min-width: 150px;
+    flex: 1 1 auto;
+
+    .label {
+      font-family: $monospace-font;
+      font-size: 0.75rem;
+      color: $grey;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.5px;
+    }
+
+    .value {
+      color: $white;
+      font-size: 1rem;
+      font-weight: 500;
+      
+      ul { padding-left: 1rem; margin: 0; }
+    }
+  }
+}
+
+.dynamic-sub-table {
+  margin: 1rem 0;
+  background: rgba($light-black, 0.3);
+  border: 1px solid rgba($white, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+
+  h4 {
+    background: rgba($black, 0.2);
+    color: $text-secondary;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.8rem 1rem;
+    margin: 0;
+    border-bottom: 1px solid rgba($white, 0.05);
+    font-family: $monospace-font;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      th {
+        text-align: left;
+        padding: 0.8rem 1rem;
+        font-size: 0.75rem;
+        color: $grey;
+        text-transform: uppercase;
+        border-bottom: 1px solid rgba($white, 0.05);
+        font-family: $monospace-font;
+      }
+
+      td {
+        padding: 0.8rem 1rem;
+        color: $white;
+        font-size: 0.9rem;
+        border-bottom: 1px solid rgba($white, 0.03);
+      }
+
+      tr:last-child td {
+        border-bottom: none;
+      }
+
+      tr:hover {
+        background: rgba($white, 0.02);
+      }
+    }
+  }
+}

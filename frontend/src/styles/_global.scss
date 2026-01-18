@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: $font;
+  color: $white;
+  background-color: #1c1b1a;
+
+  background: linear-gradient(to right, #000000, #1c1b1a);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  animation-direction: alternate;
+
+  @include custom-scrollbar;
+}
+
+.button {
+  outline: none;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  background-color: rgba($light-black, 0.95);
+  color: $light-grey;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
