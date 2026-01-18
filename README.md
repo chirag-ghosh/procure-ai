@@ -17,7 +17,7 @@ A full-stack intelligent procurement platform that automates the Request for Pro
 * **Frontend:** React (Vite), TypeScript, Sass
 * **Backend:** Node.js, Express, TypeScript
 * **Database:** PostgreSQL, Drizzle ORM (Type-safe SQL)
-* **AI Provider:** Google Gemini API (`gemini-1.5-flash`)
+* **AI Provider:** Google Gemini API (`gemini-2.5-flash`)
 * **Email Engine:**
     * **Sending:** Nodemailer (SMTP)
     * **Receiving:** `imap-simple` + `mailparser`
@@ -141,7 +141,7 @@ Vendor quotes often come as attachments. I integrated `pdf-parse` to flatten PDF
 
 ## 🤖 AI Tools Usage
 
-* **Tools Used:** Google Gemini 1.5 Flash, VS Code.
+* **Tools Used:** Google Gemini 2.5 Flash, VS Code.
 * **Prompt Engineering:**
     * Used **JSON Schema enforcement** in prompts to ensure Gemini returns strict JSON compatible with the Postgres `jsonb` columns.
     * *Example Prompt:* "Output strictly valid JSON with this schema: { score: number, summary: string }".
